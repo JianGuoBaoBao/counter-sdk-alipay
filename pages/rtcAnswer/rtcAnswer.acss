@@ -1,0 +1,50 @@
+/* 模板样式 */
+@import '../templates/playing-box-template/playing-box-template.acss';
+@import '../templates/waitting-box-template/waitting-box-template.acss';
+@import '../templates/operate-box-template/operate-box-template.acss';
+@import '../templates/IMinput-template/IMinput-template.acss';
+@import '../templates/msgpanel-template/msgpanel-template.acss';
+@import '../templates/write-dialog-template/write-dialog-template.acss';
+
+
+.container-box {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* .camera-box {
+  width: 100vw;
+  height: 100%;
+} */
+
+.waitting-box {
+  width: 100%;
+  height: calc(100% - 200rpx);
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+
+.playing-box {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:20;
+}
+
+.operate-box {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index:100;
+}

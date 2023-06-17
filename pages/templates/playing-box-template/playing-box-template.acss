@@ -1,0 +1,49 @@
+.toppanel {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background:linear-gradient(180deg,rgba(0,0,0,0.25),transparent);
+}
+
+.tellerId {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 29rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: 80rpx;
+}
+
+.timer {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: 0;
+}
+
+.sosicon{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 20rpx;
+}

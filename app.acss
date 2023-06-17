@@ -1,0 +1,26 @@
+/**app.acss**/
+page{
+  background: #f7f7f7;
+  line-height: 1.6;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.aliView .player-view .mini .live-player{
+      border-radius:8rpx;
+}
+
+.protocol-reading .player-view .mini {
+     top: 100% !important;
+     height: 100% !important;
+     right: 0 !important;
+
+}
+

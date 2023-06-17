@@ -1,0 +1,21 @@
+<view>
+    <view class="protocol-reading">
+      <movable-area>
+       <view class="protocol-reading-writing">
+                本人已阅读全部申请材料，充分了解并清楚知晓信用卡产品的相关信息，愿意遵守零用合约的各项规定。
+        </view>
+        <movable-view x="{{x}}" y="{{y}}" direction="all">
+            <view class="movable-client">
+                 <answer
+                    config="{{ user_config }}"
+                    currentUserId="{{ user_userID }}"
+                  />
+            </view>
+
+        </movable-view>
+      </movable-area>
+
+
+        <button type ="primary" onTap="sendBack">已阅读</button>
+    </view>
+</view>

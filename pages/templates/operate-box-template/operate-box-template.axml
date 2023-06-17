@@ -1,0 +1,31 @@
+<template name="operate-box">
+  <!-- 操作区 等待 -->
+  <view class="operate-box-waiting" hidden="{{startplay}}">
+    <!-- 操作按钮 -->
+    <view class="tabItem tabItemCenter" onTap="callDown">
+      <image class="tabiconCenter" src="/assets/images/tonghua.png"></image>
+      <view>挂断</view>
+    </view>
+  </view>
+  <!-- 操作区 通话中 -->
+  <view class="ningment-operate-calling" hidden="{{!startplay}}">
+      <view class="operate-box-calling">
+         <view class="tabItem" onTap="changeCamera">
+            <image class="tabicon" src="/assets/images/switchcamare.png"></image>
+            <view>切换摄像头</view>
+         </view>
+          <view class="tabItem" onTap="toggleInput">
+            <image class="tabicon" src="/assets/images/input.png"></image>
+            <text>文字聊天</text>
+          </view>
+          <view class="tabItem" onTap="changeMute">
+              <image class="tabicon" src="/assets/images/jingyin.png"></image>
+              <view>静音</view>
+           </view>
+          <view class="tabItem" onTap="callDown">
+            <image class="tabicon" src="/assets/images/guaduan.png"></image>
+            <view>挂断</view>
+          </view>
+      </view>
+  </view>
+</template>

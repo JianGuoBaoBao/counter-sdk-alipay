@@ -1,0 +1,37 @@
+<view class='conponent-box'>
+	<view class="ningmenttemplate videoview">
+		<view class="player-box">
+			<view class="poster">
+				<image class="set" mode="aspectFill" a:if="{{playerBackgroundImg}}" src="{{playerBackgroundImg}}"></image>
+			</view>
+			<view class="poster" a:if="{{!startPlay && playerBackgroundImg}}">
+				<image class="set" src="{{playerBackgroundImg}}"></image>
+			</view>
+
+			<!-- 阿里音视频组件 -->
+			<view class="aliView" a:if="{{startPlay}}">
+              <answer
+                config="{{ config }}"
+                currentUserId="{{ userID }}"
+                onPlayerChange="handlePlayerChange"
+                onUserChange="handleUserChange"
+                onHangup="handleHangup"
+                onError="handleError"
+              />
+			</view>
+
+			<!-- 等待展示区 -->
+			<slot name="watting" a:if="{{!startPlay}}"></slot>
+
+			<!-- 视频展示区 -->
+			<slot name="playing" a:if="{{startPlay}}"></slot>
+
+			<!-- 操作区 -->
+			<slot name="operate"></slot>
+
+			<slot name="dialog"></slot>
+			</view>
+
+		</view>
+	</view>
+</view>

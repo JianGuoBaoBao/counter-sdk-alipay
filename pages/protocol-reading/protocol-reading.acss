@@ -1,0 +1,33 @@
+movable-area {
+  height: 1200rpx;
+  width: 750rpx;
+  padding: 20rpx;
+  font-size: 36rpx;
+  box-sizing: border-box;
+}
+
+movable-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600rpx;
+  width: 200rpx;
+  /*background: #108ee9;*/
+  color: #fff;
+}
+
+.movable-client{
+    width: 100%;
+    height: 300rpx;
+}
+
+.movable-user{
+    width: 100%;
+    height: 300rpx;
+}
+
+.protocol-reading .player-view .mini {
+     top: 100% !important;
+     height: 100% !important;
+     right: 0 !important;
+}

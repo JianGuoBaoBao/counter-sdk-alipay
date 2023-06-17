@@ -1,0 +1,40 @@
+<!-- 我的消息 -->
+<template name="mymsg">
+	<view class="msgbox">
+		<text class="mysendicon">我：</text>
+		<text class="IMtext">{{ item.content }}</text>
+	</view>
+</template>
+<!-- 柜员消息 -->
+<template name="guimsg">
+	<view class="msgbox">
+		<image mode="widthFix" class="guiicon" src="/assets/images/guiyuan.png"></image>
+		<text class="IMtext">{{item.content}}</text>
+	</view>
+</template>
+<!-- 产品信息 -->
+<template name="promsg">
+	<view class="msgbox promsgbox" onTap="productDetail">
+		<image mode="widthFix" class="proicon" src="/assets/images/guiicon.png"></image>
+		<image mode="widthFix" class="proimage" src="{{item.imgUrl}}" a:if="{{item.imgUrl}}" data-url="{{item.url}}"></image>
+	</view>
+</template>
+
+
+<template name="msgpanel">
+	<!-- 左面板 -->
+	<view class="leftpanel" onTap="closeInput" a:if="{{startplay}}">
+		<scroll-view class="msgList" scroll-y="true" scroll-top="{{ leftpanelScrolltop }}" scroll-with-animation="{{true}}">
+			<view id="msgList">
+				<block a:for="{{IMmsgList}}" a:key="index" a:if="{{item.content || item.imgUrl}}">
+					<!--我的消息  -->
+					<template a:if="{{item.type == 'send'}}" is="mymsg" data="{{item}}"></template>
+					<!-- 柜员消息 -->
+					<template a:if="{{item.type == 'receive' && !item.imgUrl}}" is="guimsg" data="{{item}}"></template>
+					<!-- 产品消息 -->
+					<template a:if="{{item.imgUrl}}" is="promsg" data="{{item, productDetail}}"></template>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+</template>

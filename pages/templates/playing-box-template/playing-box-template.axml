@@ -1,0 +1,6 @@
+<template name="playing-box">
+	<!-- 顶部计时器和工号 -->
+	<view class="toppanel">
+		<view class="timer">{{ timer }}</view>
+	</view>
+</template>

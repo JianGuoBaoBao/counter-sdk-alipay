@@ -1,0 +1,15 @@
+<template name="IMinput">
+	<view a:if="{{ IMinput }}">
+		<view class="inputmark" onTap="closeInput"></view>
+		<!-- 消息输入 -->
+		<view class="IMmsgInputContainer">
+			<view class="IMmsgInputBox">
+				<view class="IMmsgInput" onTap="focusInput">
+					<input id="IMinput" placeholder="输入文字" focus="{{IMinputFocus}}" value="{{IMmsg}}" onInput="bindinput" />
+				</view>
+				<view size="mini" class="IMmsgSendBtn" onTap="sendIMmsg">发送</view>
+			</view>
+		</view>
+	</view>
+
+</template>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rtcAnswer/rtcAnswer",
+    "pages/protocol-reading/protocol-reading"
+
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  },
+  "behavior": {
+    "requestReferrerStrategy": "page"
+  },
+  "plugins": {
+    "rtc": {
+      "version": "*",
+      "provider": "2021002126663572"
+    }
+  },
+  "useDynamicPlugins": true
+}

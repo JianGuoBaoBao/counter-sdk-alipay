@@ -1,0 +1,43 @@
+<view>
+  <view class="page">
+        <view class="form-row">
+              <view class="form-row-label">客户id</view>
+              <view class="form-row-content">
+                <input value='{{userId}}' class="input" maxlength="100" placeholder="请输入客户id" onInput="bindinput1"/>
+              </view>
+         </view>
+
+         <view class="form-row">
+               <view class="form-row-label">机构号</view>
+               <view class="form-row-content">
+                 <input value='{{orgId}}' class="input" maxlength="100" placeholder="请输入机构号" onInput="bindinput2"/>
+               </view>
+          </view>
+
+          <view class="form-row">
+                                   <view class="form-row-label">channelNo</view>
+                                   <view class="form-row-content">
+                                     <input value='{{channelNo}}' class="input" maxlength="100" placeholder="请输入channelNo" onInput="bindinput3"/>
+                                   </view>
+                    </view>
+
+
+
+          <view class="form-row">
+                                     <view class="form-row-label">businessNo</view>
+                                     <view class="form-row-content">
+                                       <input value='{{businessNo}}' class="input" maxlength="100" placeholder="请输入businessNo" onInput="bindinput4"/>
+                                     </view>
+                      </view>
+          <button type="primary" onTap="joinRoom">呼叫</button>
+
+        <!--           <answer -->
+        <!--               config="{{ config }}" -->
+        <!--               currentUserId="{{ userID }}" -->
+        <!--               onPlayerChange="handlePlayerChange" -->
+        <!--               onUserChange="handleUserChange" -->
+        <!--               onHangup="handleHangup" -->
+        <!--               onError="handleError" -->
+        <!--             /> -->
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<template name="waitting-box">
+    <!--支付宝小程序hidden只在view 上有 -->
+    <view hidden="{{connectTeller}}"><image class="avator" src="/assets/images/tx.png"></image></view>
+    <view hidden="{{!connectTeller}}"><image class="avator" src="/assets/images/toux.png"></image></view>
+<!--     <view class="waittext1">感谢您使用徕檬视频</view> -->
+    <view hidden="{{connectTeller}}"  class="waittext2">正在为您连接柜员 请耐心等待...</view>
+<!--     <view hidden="{{!connectTeller}}" class="waittext2"></view> -->
+<!--     <view hidden="{{connectTeller}}" class="waittext2">正在等待柜员接听...</view> -->
+
+    <swiper a:if="{{show}}" class="swipper" indicator-dots="{{false}}" circular="true" autoplay="true">
+        <swiper-item>
+            <image class="adgroung" src="cloud://shipinzhongxin-vbicj.7368-shipinzhongxin-vbicj-1301977456/images/banner/pic_banner01.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="adgroung" src="cloud://shipinzhongxin-vbicj.7368-shipinzhongxin-vbicj-1301977456/images/banner/pic_banner02.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="adgroung" src="cloud://shipinzhongxin-vbicj.7368-shipinzhongxin-vbicj-1301977456/images/banner/pic_banner03.png"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 计时 -->
+    <view class="wait-timer">{{timer}}</view>
+</template>

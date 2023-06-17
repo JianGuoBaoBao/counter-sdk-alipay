@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "webrtc-room-artc": "/pages/components/webrtc-room-artc/webrtc-room-artc"
+  },
+  "defaultTitle": "虚拟营业厅"
+}

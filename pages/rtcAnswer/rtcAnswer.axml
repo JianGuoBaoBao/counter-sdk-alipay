@@ -1,0 +1,73 @@
+<import src='../templates/waitting-box-template/waitting-box-template.axml' />
+<import src='../templates/playing-box-template/playing-box-template.axml' />
+<import src='../templates/operate-box-template/operate-box-template.axml' />
+<import src='../templates/IMinput-template/IMinput-template.axml' />
+<import src='../templates/msgpanel-template/msgpanel-template.axml' />
+<import src='../templates/write-dialog-template/write-dialog-template.axml' />
+
+<view class="container-box">
+  <webrtc-room-artc id="webrtcroom"
+      roomId="{{roomId}}"
+      roomName="{{roomName}}"
+      userID="{{userId}}"
+      tellerId="{{tellerId}}"
+      userSig="{{userSig}}"
+      smallViewLeft="{{smallViewLeft}}"
+      smallViewTop="{{smallViewTop}}"
+      smallViewWidth="{{smallViewWidth}}"
+      smallViewHeight="{{smallViewHeight}}"
+      playerBackgroundImg="{{playerBackgroundImg}}"
+      onCallFatherMethod="fatherMethod"
+    >
+
+    <!-- 等待展示区 -->
+    <view onTap="closeInput" class="waitting-box" slot="watting">
+      <template is="waitting-box" data="{{timer,connectTeller,show}}"></template>
+    </view>
+    <!-- 视频展示区 -->
+    <view onTap="closeInput" class="playing-box" slot="playing">
+      <template is="playing-box" data="{{tellerId,timer}}"></template>
+    </view>
+
+    <view class="dialog-operate" slot="dialog">
+        <template is="dialog" data="{{ isVisible, canvasTip }}"></template>
+    </view>
+
+    <!-- 操作区 -->
+    <view slot="operate" class="operate-box" hidden="{{ IMinput }}">
+      <template is="operate-box"
+        data="{{
+          startplay,
+          changeMute,
+          callDown,
+          jinyin,
+          toggleInput,
+          touping,
+          changeCamera,
+        }}" />
+    </view>
+  </webrtc-room-artc>
+
+  <!-- 滚动区域操作会被webrtc-room捕获，聊天面板提取到外部 -->
+  <template is="msgpanel"
+    data="{{
+      closeInput,
+      startplay,
+      leftpanelScrolltop,
+      IMmsgList,
+      productDetail
+  }}">
+  </template>
+
+  <!-- 消息输入 -->
+  <template is="IMinput"
+       data="{{
+          IMinput,
+          IMinputFocus,
+          IMmsg,
+          bindinput,
+          sendIMmsg,
+          closeInput
+      }}">
+  </template>
+</view>

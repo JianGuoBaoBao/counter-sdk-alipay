@@ -1,0 +1,7 @@
+{
+  "styleIsolation": "apply-shared",
+  "defaultTitle": "请阅读以下文字",
+  "usingComponents": {
+    "answer": "plugin://rtc/flex"
+  }
+}

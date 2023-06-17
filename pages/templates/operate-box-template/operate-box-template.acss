@@ -1,0 +1,101 @@
+.tabiconCenter {
+  width: 140rpx;
+  height: 140rpx;
+}
+.operate-box-calling {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: white;
+}
+
+.operate-box-waiting{
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: #444;
+}
+
+
+.operate-box-waiting .tabItem {
+  width: 140rpx;
+  height: 200rpx;
+  padding: 18rpx 0 14rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: #444;
+}
+
+.operate-box-calling .tabItem{
+  width: 170rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: white;
+  padding: 19rpx 0;
+}
+.tabicon {
+  width: 88rpx;
+  height: 88rpx;
+  margin-bottom:10rpx;
+}
+
+.operate-box-waiting .tabItemCenter {
+  width: 140rpx;
+  margin: 0 77rpx;
+  padding-top: 0rpx;
+}
+
+.operate-box-calling .tabItemCenter{
+  height: 200rpx;
+  width: 200rpx;
+  padding-top: 0;
+}
+
+
+.ningment-operate-calling {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200rpx;
+}
+
+@media (min-width:650px){
+
+  .operate-box-waiting{
+    transform: scale(0.8) translateY(30px);
+  }
+}

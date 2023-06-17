@@ -1,0 +1,32 @@
+<template name="dialog">
+    <!-- 遮罩 -->
+    	<view class="dialog-modal" hidden="{{!isVisible}}" onTap="modelClick"></view>
+
+        <view class="dialog-content-operate" hidden="{{!isVisible}}">
+            <view class="dialog-content-header">
+                <view class="title">签名确认
+                  <image mode="widthFix" class="close" src="/assets/images/icon-close.png" onTap="modelClick"></image>
+                </view>
+                <view class="tip">请使用正楷字写下您的名字</view>
+            </view>
+
+             <view class="dialog-content-canvas">
+                <view class="tips" hidden="{{ !canvasTip }}">请点击进行签名</view>
+                <canvas
+                      a:if="{{isVisible}}"
+                      id="my-canvas"
+                      class='canvas'
+                      disable-scroll='{{true}}'
+                      onTouchStart='touchStart'
+                      onTouchMove='touchMove'
+                  />
+             </view>
+
+            <view class="dialog-content-footer">
+                <view class="button-ghost" onTap="cancel">取消</view>
+                <view class="button-primary"  onTap="subMit">确定</view>
+            </view>
+
+        </view>
+
+</template>

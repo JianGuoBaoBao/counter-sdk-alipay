@@ -1,0 +1,92 @@
+.leftpanel {
+  max-width: 330rpx;
+  height: calc(70vh - 550rpx);
+  position: absolute;
+  left: 0;
+  top: 400rpx;
+}
+
+.msgList {
+  position: absolute;
+  top: 142rpx;
+  left: 0;
+  z-index: 10;
+  width: 300rpx;
+  height: calc(100vh - 900rpx);
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.msgbox {
+  box-sizing: border-box;
+  width: 260rpx;
+  height: fit-content;
+  min-height: 64rpx;
+  padding: 0 10rpx;
+  margin: 10rpx 0 0 20rpx;
+  position: relative;
+  background: rgba(3, 3, 3, 0.5);
+  border-radius: 28rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.guiicon {
+  height: 40rpx;
+  width: 40rpx;
+  position: relative;
+  top: 12rpx;
+  margin-right: 12rpx;
+}
+
+.mysendicon {
+  color: #fff;
+  line-height: 64rpx;
+  font-size: 24rpx;
+}
+
+.showicon {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 284rpx;
+}
+
+
+.IMmsg {
+  width: 240rpx;
+  border-radius: 28rpx;
+}
+
+.IMtext {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline;
+  line-height: 64rpx;
+  font-size: 24rpx;
+}
+
+
+/* 产品信息 */
+
+.promsgbox {
+  position: relative;
+}
+
+.proicon {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.proimage {
+  width: 240rpx;
+  border-radius: 28rpx;
+  margin-top: 10rpx;
+}
